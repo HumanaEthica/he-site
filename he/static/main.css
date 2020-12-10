@@ -1,0 +1,62 @@
+/**
+ * Header
+ */
+.base-header {
+    line-height: 1;
+}
+
+.base-header-logo {
+    font-size: 2.25rem;
+    max-width: 500px;
+    padding: 2rem 0;
+}
+
+/**
+ * Navbar
+ */
+.base-nav {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+
+    margin: 1rem 0 1rem 0 !important;
+}
+
+@media (min-width: 992px) {
+    .base-nav .navbar-menu {
+        display: none;
+    }
+
+    .base-nav .nav-link:hover + .navbar-menu, .base-nav .navbar-menu:hover {
+        display: block;
+        position: absolute;
+        background: #F9F9F9;
+    }
+
+    .auth-buttons {
+        position: absolute;
+        right: 0;
+    }
+}
+
+.base-nav .navbar-menu, .base-nav .navbar-menu-child {
+    list-style-type: none;
+    padding: 0.25rem 0;
+    margin: 0;
+}
+
+.base-nav .navbar-menu > li {
+    padding: 0.25rem 1rem;
+}
+
+.base-nav .navbar-menu a {
+    color: rgba(0,0,0,.7);
+    text-decoration: none;
+}
+
+.base-nav .navbar-menu a:hover {
+    color: rgba(0,0,0,.9);
+}
+
+.base-nav .navbar-menu-child {
+    padding-left: 1rem;
+}

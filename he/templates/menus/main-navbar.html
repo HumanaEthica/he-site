@@ -1,0 +1,23 @@
+{% load menu_tags i18n %}
+
+<nav class="base-nav navbar navbar-expand-lg navbar-light rounded">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+        <ul class="navbar-nav">
+            {% for child in children %}
+                <li class="nav-item{% if child.selected %} active{% endif %}">
+                    <a class="nav-link" href="{{ child.attr.redirect_url|default:child.get_absolute_url }}">{{ child.get_menu_title }}</a>
+
+                    {% if child.children %}
+                        {% show_menu from_level to_level extra_inactive extra_active "menus/main-navbar-dropdown.html" "" "" child %}
+                    {% endif %}
+                </li>
+            {% endfor %}
+
+            {% language_chooser "menus/language.html" %}
+        </ul>
+    </div>
+</nav>
