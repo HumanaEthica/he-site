@@ -6,10 +6,13 @@ from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
 from django.urls import include, path
 
+import heapp
+
 admin.autodiscover()
 
 urlpatterns = [
     path("sitemap.xml", sitemap, {"sitemaps": {"cmspages": CMSSitemap}}),
+    path("app/", include('heapp.urls'))
 ]
 
 
