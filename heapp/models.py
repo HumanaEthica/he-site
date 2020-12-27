@@ -22,10 +22,7 @@ class Event(models.Model):
     date = models.DateTimeField('date')
     tags = models.ManyToManyField(Tag)
     feedback = models.TextField(max_length=1023)  # TODO make it an object
-    
-
-    def add_participant(self):
-        pass
+    partitipatns = models.ManyToManyField(User)
 
     def __str__(self):
         return self.name
