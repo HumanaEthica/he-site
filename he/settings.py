@@ -30,7 +30,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 
@@ -179,8 +178,10 @@ INSTALLED_APPS = [
     'djangocms_googlemap',
     'djangocms_video',
     'he',
-    'heapp'
-]
+    'heapp']
+#     'heapp.User',
+#     'django.contrib.auth.models'
+# ]
 
 LANGUAGES = (
     ('en', 'English'),
@@ -234,3 +235,5 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+
